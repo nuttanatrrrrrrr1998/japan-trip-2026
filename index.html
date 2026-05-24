@@ -3,461 +3,427 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="theme-color" content="#0D0F14">
-<title>🗾 Japan Trip 2026 — กลุ่ม 20 คน</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<meta name="description" content="แผนการเดินทางญี่ปุ่น กลุ่ม 20 คน — 28 พ.ค. ถึง 5 มิ.ย. 2026 พร้อม GPS ทุกสถานที่">
-<meta property="og:title" content="🗾 Japan Trip 2026 — กลุ่ม 20 คน">
-<meta property="og:description" content="แผนการเดินทางโตเกียวและฟูจิ 9 วัน พร้อม GPS ทุกจุด">
+<meta name="theme-color" content="#FFFFFF">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="description" content="แผนทริปญี่ปุ่น 20 คน · 28 พ.ค.–5 มิ.ย. 2026 · GPS ทุกสถานที่">
+<title>🗾 Japan Trip 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════
-   DESIGN TOKENS
-═══════════════════════════════════════ */
-:root {
-  --bg:       #0D0F14;
-  --s1:       #161920;
-  --s2:       #1E2230;
-  --s3:       #262B3D;
-  --bdr:      rgba(255,255,255,0.07);
-  --bdr2:     rgba(255,255,255,0.13);
-  --tx:       #E8EAF0;
-  --tx2:      #8B90A0;
-  --tx3:      #4A5068;
-  --accent:   #4F8EF7;
-  --accent2:  #7B6FFF;
-  --red:      #FF5E5E;
-  --gold:     #F5C842;
-  --green:    #3DD68C;
-  --pink:     #FF7EB3;
-  --orange:   #FF9057;
-  --r: 12px;
-  --r-sm: 8px;
-  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Sans Thai',sans-serif;
+  background:#F4F2EE;
+  color:#1A1A1A;
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
-/* ═══ RESET ═══ */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{font-family:'Noto Sans Thai',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;overflow-x:hidden;line-height:1.5;}
-a{text-decoration:none;color:inherit;}
-button{cursor:pointer;border:none;background:none;font-family:inherit;}
-img{max-width:100%;display:block;}
+/* ─── TOKENS ─── */
+:root{
+  --bg:#F4F2EE;
+  --card:#FFFFFF;
+  --ink:#1A1A1A;
+  --ink2:#4A4A4A;
+  --ink3:#888;
+  --bdr:#E2DED8;
+  --bdr2:#CCC9C2;
+  --red:#D93025;
+  --red-bg:#FFF0EE;
+  --red-lt:#FFE4E1;
+  --blue:#1A56DB;
+  --blue-bg:#EEF5FF;
+  --gold:#92600A;
+  --gold-bg:#FFF8E6;
+  --green:#1A6E3C;
+  --green-bg:#E8F7EE;
+  --purple:#5B21B6;
+  --purple-bg:#F3EEFF;
+  --pink:#9D2161;
+  --pink-bg:#FCEEF6;
+  --gray-bg:#F0EEE9;
+  --r:14px;
+  --shadow:0 2px 12px rgba(0,0,0,.07);
+}
 
-/* ═══ NOISE / GLOW ═══ */
-body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;}
-.glow{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;}
-.g1{width:500px;height:500px;top:-150px;left:-150px;background:rgba(79,142,247,0.06);}
-.g2{width:400px;height:400px;bottom:0;right:-100px;background:rgba(123,111,255,0.05);}
-
-/* ═══════════════════════════════════════
-   TOP NAV
-═══════════════════════════════════════ */
+/* ─── TOPNAV ─── */
 .topnav{
   position:sticky;top:0;z-index:200;
-  background:rgba(13,15,20,0.88);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--bdr);
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1.5px solid var(--bdr);
 }
-.topnav-inner{
-  max-width:960px;margin:0 auto;
-  display:flex;align-items:center;gap:0;
-  padding:0 16px;
+.nav-inner{
+  max-width:900px;margin:0 auto;
+  display:flex;align-items:center;
+  padding:0 16px;gap:0;
 }
 .nav-logo{
-  font-family:'DM Serif Display',serif;
-  font-size:15px;color:var(--tx);
+  font-size:15px;font-weight:800;color:var(--ink);
   padding:13px 16px 13px 0;
-  border-right:1px solid var(--bdr);
+  border-right:1.5px solid var(--bdr);
   margin-right:8px;white-space:nowrap;flex-shrink:0;
 }
-.nav-logo em{font-style:italic;color:var(--accent);}
+.nav-logo span{color:var(--red);}
 .nav-days{
   display:flex;gap:2px;overflow-x:auto;padding:8px 0;
   scrollbar-width:none;flex:1;
 }
 .nav-days::-webkit-scrollbar{display:none;}
-.nav-day-btn{
-  padding:5px 12px;border-radius:20px;
-  font-size:11px;font-weight:500;color:var(--tx2);
-  white-space:nowrap;flex-shrink:0;
-  transition:all .2s;cursor:pointer;
-  border:1px solid transparent;
+.nd-btn{
+  padding:6px 14px;border-radius:20px;
+  font-size:12px;font-weight:600;color:var(--ink3);
+  white-space:nowrap;flex-shrink:0;cursor:pointer;
+  border:1.5px solid transparent;
+  background:none;font-family:inherit;
+  transition:all .18s;
 }
-.nav-day-btn:hover{background:var(--s2);color:var(--tx);}
-.nav-day-btn.active{background:var(--s3);color:var(--tx);border-color:var(--bdr2);}
-.nav-day-btn.flight-day.active{color:var(--red);}
+.nd-btn:hover{background:var(--gray-bg);color:var(--ink);}
+.nd-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+.nd-btn.fly{color:var(--red);}
+.nd-btn.fly.active{background:var(--red);border-color:var(--red);}
 
-/* Emergency button */
-.sos-fab{
-  position:fixed;bottom:20px;right:20px;z-index:300;
-  width:52px;height:52px;border-radius:50%;
-  background:linear-gradient(135deg,#FF5E5E,#FF3030);
-  display:flex;align-items:center;justify-content:center;
-  font-size:22px;box-shadow:0 4px 20px rgba(255,94,94,0.5);
-  transition:transform .2s,box-shadow .2s;
-  cursor:pointer;
+/* ─── MOBILE TABS ─── */
+.mob-tabs{
+  display:none;
+  position:sticky;top:49px;z-index:190;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1.5px solid var(--bdr);
+  padding:8px 12px;gap:6px;overflow-x:auto;scrollbar-width:none;
 }
-.sos-fab:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(255,94,94,0.7);}
-
-/* ═══════════════════════════════════════
-   HERO
-═══════════════════════════════════════ */
-.hero{
-  position:relative;z-index:1;
-  padding:48px 20px 36px;
-  max-width:960px;margin:0 auto;
-}
-.hero-eyebrow{
-  font-family:'DM Mono',monospace;font-size:10px;
-  letter-spacing:4px;color:var(--accent);
-  text-transform:uppercase;margin-bottom:12px;
-  display:flex;align-items:center;gap:10px;
-}
-.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--accent);}
-.hero-title{
-  font-family:'DM Serif Display',serif;
-  font-size:clamp(36px,7vw,68px);line-height:1.05;
-  margin-bottom:6px;
-  background:linear-gradient(140deg,#fff 50%,rgba(255,255,255,.45));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.hero-title em{
-  font-style:italic;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.hero-sub{font-family:'DM Mono',monospace;font-size:12px;color:var(--tx2);letter-spacing:1.5px;margin-bottom:24px;}
-
-/* Stats row */
-.stats-row{display:flex;gap:0;flex-wrap:wrap;margin-bottom:18px;}
-.stat-box{
-  padding:12px 20px;
-  background:var(--s1);border:1px solid var(--bdr);
-  text-align:center;
-}
-.stat-box:first-child{border-radius:10px 0 0 10px;}
-.stat-box:last-child{border-radius:0 10px 10px 0;border-left:none;}
-.stat-box:not(:first-child):not(:last-child){border-left:none;}
-.stat-n{font-family:'DM Serif Display',serif;font-size:22px;color:var(--accent);display:block;line-height:1;}
-.stat-l{font-size:9.5px;color:var(--tx3);letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
-
-/* Alert banner */
-.alert-strip{
-  display:flex;align-items:center;gap:12px;
-  background:rgba(245,200,66,0.08);
-  border:1px solid rgba(245,200,66,0.25);
-  border-radius:10px;padding:12px 16px;
-  margin-top:14px;font-size:12px;color:var(--gold);
-}
-
-/* Flight bar */
-.flight-bar{
-  display:inline-flex;align-items:center;gap:10px;
-  background:rgba(255,94,94,0.08);
-  border:1px solid rgba(255,94,94,0.2);
-  border-radius:10px;padding:10px 16px;
-  font-family:'DM Mono',monospace;font-size:11px;
-  color:var(--red);margin-top:12px;width:fit-content;
-}
-
-/* ═══════════════════════════════════════
-   QUICK NAV TABS (Mobile day picker)
-═══════════════════════════════════════ */
-.day-tabs{
-  position:sticky;top:49px;z-index:100;
-  background:rgba(13,15,20,0.9);
-  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--bdr);
-  padding:10px 16px;
-  display:none; /* shown on mobile only */
-  overflow-x:auto;scrollbar-width:none;
-  gap:6px;
-}
-.day-tabs::-webkit-scrollbar{display:none;}
-.day-tab{
-  flex-shrink:0;
-  padding:7px 14px;border-radius:20px;
-  font-size:12px;font-weight:600;
-  color:var(--tx2);border:1px solid var(--bdr);
+.mob-tabs::-webkit-scrollbar{display:none;}
+.mt-btn{
+  flex-shrink:0;padding:7px 16px;border-radius:20px;
+  font-size:13px;font-weight:700;color:var(--ink2);
+  border:1.5px solid var(--bdr);background:var(--card);
+  cursor:pointer;font-family:inherit;transition:all .18s;
   white-space:nowrap;
 }
-.day-tab.active{background:var(--s3);color:var(--tx);border-color:var(--bdr2);}
+.mt-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+.mt-btn.fly.active{background:var(--red);border-color:var(--red);}
 
-/* ═══════════════════════════════════════
-   MAIN CONTENT
-═══════════════════════════════════════ */
-.content{
-  max-width:960px;margin:0 auto;
-  padding:0 20px 100px;
-  position:relative;z-index:1;
+/* ─── HERO ─── */
+.hero{
+  max-width:900px;margin:0 auto;
+  padding:40px 20px 28px;
+}
+.hero-ey{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:4px;color:var(--red);
+  text-transform:uppercase;margin-bottom:10px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-ey::before{content:'';width:20px;height:1.5px;background:var(--red);}
+.hero-h1{
+  font-size:clamp(36px,8vw,64px);font-weight:800;
+  line-height:1.05;margin-bottom:6px;color:var(--ink);
+}
+.hero-h1 em{font-style:italic;color:var(--red);}
+.hero-sub{
+  font-family:'DM Mono',monospace;font-size:12px;
+  color:var(--ink3);letter-spacing:1.5px;margin-bottom:22px;
+}
+.stats-row{display:flex;gap:0;flex-wrap:wrap;margin-bottom:16px;}
+.stat-b{
+  padding:12px 20px;background:var(--card);
+  border:1.5px solid var(--bdr);text-align:center;
+}
+.stat-b:first-child{border-radius:12px 0 0 12px;}
+.stat-b:last-child{border-radius:0 12px 12px 0;border-left:none;}
+.stat-b+.stat-b{border-left:none;}
+.stat-n{font-size:24px;font-weight:800;color:var(--red);display:block;line-height:1;}
+.stat-l{font-size:10px;color:var(--ink3);letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
+.flight-bar{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--red-bg);border:1.5px solid var(--red-lt);
+  border-radius:10px;padding:10px 16px;
+  font-family:'DM Mono',monospace;font-size:11.5px;color:var(--red);
+  font-weight:500;margin-bottom:14px;
+}
+.share-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:10px 18px;background:var(--card);
+  border:1.5px solid var(--bdr2);border-radius:10px;
+  color:var(--ink2);font-size:13px;font-weight:600;
+  cursor:pointer;font-family:inherit;transition:all .18s;
+}
+.share-btn:hover{background:var(--gray-bg);color:var(--ink);}
+.alert-bar{
+  display:flex;align-items:flex-start;gap:10px;
+  background:var(--gold-bg);border:1.5px solid #F0D090;
+  border-radius:10px;padding:12px 16px;
+  font-size:13px;color:var(--gold);margin-top:14px;
+  line-height:1.6;
 }
 
-/* Section label */
+/* ─── HOTELS ─── */
+.hotel-card{
+  display:flex;align-items:center;gap:14px;
+  background:var(--card);border:1.5px solid var(--bdr);
+  border-radius:var(--r);padding:16px 18px;
+  margin-bottom:10px;box-shadow:var(--shadow);
+}
+.h-icon{font-size:28px;flex-shrink:0;}
+.h-info{flex:1;min-width:0;}
+.h-name{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.h-det{font-size:12px;color:var(--ink3);line-height:1.5;}
+.h-nights{
+  font-family:'DM Mono',monospace;font-size:11px;font-weight:500;
+  color:var(--blue);background:var(--blue-bg);
+  border-radius:8px;padding:5px 10px;white-space:nowrap;flex-shrink:0;
+}
+
+/* ─── TIPS BOX ─── */
+.tips-box{
+  background:var(--card);border:1.5px solid var(--bdr);
+  border-radius:var(--r);padding:18px 20px;
+  margin-bottom:10px;box-shadow:var(--shadow);
+}
+.tips-box h3{
+  font-size:14px;font-weight:700;color:var(--ink);
+  margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1.5px solid var(--bdr);
+  display:flex;align-items:center;gap:8px;
+}
+.tips-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+@media(max-width:540px){.tips-grid{grid-template-columns:1fr;}}
+.tip-item{
+  font-size:13px;color:var(--ink2);line-height:1.7;
+  padding-left:14px;position:relative;
+}
+.tip-item::before{
+  content:'▸';position:absolute;left:0;
+  color:var(--red);font-size:11px;top:2px;
+}
+.tip-item strong{color:var(--ink);font-weight:700;}
+
+/* ─── LEGEND ─── */
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+
+/* ─── SECTION LABEL ─── */
 .sec-lbl{
-  font-family:'DM Mono',monospace;font-size:9px;
-  letter-spacing:3px;text-transform:uppercase;
-  color:var(--tx3);margin:28px 0 14px;
+  font-family:'DM Mono',monospace;font-size:9.5px;
+  letter-spacing:3px;text-transform:uppercase;color:var(--ink3);
+  margin:28px 0 12px;
   display:flex;align-items:center;gap:12px;
 }
-.sec-lbl::after{content:'';flex:1;height:1px;background:var(--bdr);}
+.sec-lbl::after{content:'';flex:1;height:1.5px;background:var(--bdr);}
 
-/* Legend */
-.legend{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px;}
+/* ─── CONTENT ─── */
+.content{max-width:900px;margin:0 auto;padding:0 20px 100px;}
 
-/* ═══════════════════════════════════════
-   DAY CARD
-═══════════════════════════════════════ */
-.day-wrap{margin-bottom:14px;}
-
+/* ─── DAY CARD ─── */
+.day-wrap{margin-bottom:12px;}
 .day-card{
-  background:var(--s1);border:1px solid var(--bdr);
+  background:var(--card);border:1.5px solid var(--bdr);
   border-radius:var(--r);overflow:hidden;
-  box-shadow:var(--shadow);
-  transition:border-color .2s;
+  box-shadow:var(--shadow);transition:border-color .2s;
 }
 .day-card:hover{border-color:var(--bdr2);}
 
-/* Header */
-.day-header{
+.day-hdr{
   display:flex;align-items:stretch;
   cursor:pointer;-webkit-tap-highlight-color:transparent;
   user-select:none;
 }
-.day-num{
-  width:72px;flex-shrink:0;
+.day-badge{
+  width:76px;flex-shrink:0;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:16px 8px;border-right:1px solid var(--bdr);gap:1px;
+  padding:18px 8px;border-right:1.5px solid var(--bdr);gap:2px;
+  background:var(--gray-bg);
 }
-.day-card.is-flight .day-num{background:rgba(255,94,94,0.07);}
-.dn-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--tx3);text-transform:uppercase;}
-.dn-n{font-family:'DM Serif Display',serif;font-size:28px;line-height:1.1;color:var(--tx);}
-.day-card.is-flight .dn-n{color:var(--red);}
-.dn-d{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1px;color:var(--tx3);}
+.day-card.is-fly .day-badge{background:var(--red-bg);}
+.db-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--ink3);text-transform:uppercase;}
+.db-num{font-size:32px;font-weight:800;color:var(--ink);line-height:1;}
+.day-card.is-fly .db-num{color:var(--red);}
+.db-dow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--ink3);}
 
-.day-hinfo{flex:1;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;gap:4px;}
-.dh-title{font-size:14px;font-weight:600;color:var(--tx);display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
-.dh-date{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--tx3);}
-.dh-preview{font-size:11.5px;color:var(--tx2);margin-top:3px;}
+.day-meta{flex:1;padding:16px 18px;display:flex;flex-direction:column;justify-content:center;gap:5px;}
+.dm-title{font-size:16px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.dm-date{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:1px;color:var(--ink3);}
+.dm-prev{font-size:13px;color:var(--ink2);line-height:1.5;}
 
-.day-chevron{
-  width:48px;flex-shrink:0;
+.day-chev{
+  width:50px;flex-shrink:0;
   display:flex;align-items:center;justify-content:center;
-  color:var(--tx3);font-size:20px;
+  color:var(--ink3);font-size:22px;
   transition:transform .3s;
 }
-.day-card.open .day-chevron{transform:rotate(180deg);}
+.day-card.open .day-chev{transform:rotate(180deg);}
 
-/* Body */
-.day-body{
-  display:none;
-  border-top:1px solid var(--bdr);
-}
-.day-card.open .day-body{display:block;animation:slideDown .22s ease;}
+/* ─── DAY BODY ─── */
+.day-body{display:none;border-top:1.5px solid var(--bdr);}
+.day-card.open .day-body{display:block;animation:slideIn .22s ease;}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
 
-@keyframes slideDown{
-  from{opacity:0;transform:translateY(-8px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-/* ═══════════════════════════════════════
-   ACTIVITY ITEM
-═══════════════════════════════════════ */
+/* ─── ACTIVITY ITEM ─── */
 .act{
-  display:grid;
-  grid-template-columns:96px 1fr 52px;
-  gap:0;
-  padding:13px 16px;
-  border-bottom:1px solid var(--bdr);
-  transition:background .15s;
-  align-items:start;
+  border-bottom:1.5px solid var(--bdr);
+  overflow:hidden;
 }
 .act:last-child{border-bottom:none;}
-.act:hover{background:rgba(255,255,255,0.02);}
+.act:hover{background:#FAFAF8;}
 
-/* Time */
+.act-row{
+  display:grid;
+  grid-template-columns:90px 1fr 60px;
+  align-items:start;
+  padding:14px 18px;gap:0;
+}
+
 .act-time{
-  font-family:'DM Mono',monospace;font-size:10px;
-  color:var(--tx3);padding-top:3px;letter-spacing:.5px;
-  line-height:1.4;
+  font-family:'DM Mono',monospace;
+  font-size:11px;font-weight:500;
+  color:var(--ink3);padding-top:4px;
+  letter-spacing:.3px;line-height:1.5;
 }
 
-/* Content */
-.act-body{display:flex;flex-direction:column;gap:5px;padding-right:8px;}
+.act-body{display:flex;flex-direction:column;gap:6px;padding-right:6px;}
 .act-name{
-  font-size:13.5px;font-weight:500;color:var(--tx);
-  display:flex;align-items:flex-start;gap:7px;flex-wrap:wrap;
-  line-height:1.4;
+  font-size:15px;font-weight:700;color:var(--ink);
+  display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;
+  line-height:1.35;
 }
-.act-name .ico{flex-shrink:0;margin-top:1px;}
-.act-desc{font-size:11.5px;color:var(--tx2);line-height:1.6;}
+.act-ico{font-size:18px;flex-shrink:0;margin-top:1px;}
+.act-desc{font-size:13px;color:var(--ink2);line-height:1.65;}
 
 /* Route pill */
-.route-pill{
-  display:inline-flex;align-items:center;gap:5px;
-  font-size:10.5px;color:var(--tx2);
-  background:var(--s2);border:1px solid var(--bdr);
-  border-radius:6px;padding:4px 10px;
-  margin-top:4px;width:fit-content;line-height:1.4;
+.route-p{
+  display:inline-flex;align-items:flex-start;gap:6px;
+  font-size:12.5px;color:var(--green);font-weight:500;
+  background:var(--green-bg);border-radius:8px;
+  padding:6px 12px;margin-top:2px;width:fit-content;
+  line-height:1.5;
 }
-.route-pill .ricon{font-size:12px;flex-shrink:0;}
-
-/* Warning pill */
-.warn-pill{
-  display:inline-flex;align-items:center;gap:5px;
-  font-size:10.5px;color:var(--gold);
-  background:rgba(245,200,66,0.08);
-  border:1px solid rgba(245,200,66,0.2);
-  border-radius:6px;padding:4px 10px;
-  margin-top:4px;width:fit-content;
+/* Warn pill */
+.warn-p{
+  display:inline-flex;align-items:flex-start;gap:6px;
+  font-size:12.5px;color:var(--gold);font-weight:500;
+  background:var(--gold-bg);border:1px solid #F0D090;
+  border-radius:8px;padding:6px 12px;margin-top:2px;
+  width:fit-content;line-height:1.5;
 }
 
-/* ═══════════════════════════════════════
-   GPS BUTTON
-═══════════════════════════════════════ */
-.gps{
-  width:48px;height:48px;flex-shrink:0;
-  border-radius:10px;
-  border:1px solid var(--bdr2);
-  background:var(--s2);
+/* GPS BUTTON — BIG RED */
+.gps-btn{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:2px;color:var(--tx2);
-  transition:all .2s;
-  cursor:pointer;position:relative;overflow:hidden;
-  align-self:flex-start;
+  width:52px;height:52px;border-radius:12px;
+  background:var(--red);color:#fff;
+  text-decoration:none;flex-shrink:0;
+  font-size:20px;gap:2px;
+  transition:opacity .15s,transform .1s;
+  align-self:flex-start;margin-top:1px;
+  box-shadow:0 2px 8px rgba(217,48,37,.25);
 }
-.gps::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  opacity:0;transition:opacity .2s;
-}
-.gps:hover{border-color:transparent;color:#fff;transform:scale(1.06);}
-.gps:hover::before{opacity:1;}
-.gps:active{transform:scale(0.97);}
-.gps svg{position:relative;z-index:1;flex-shrink:0;}
-.gps span{position:relative;z-index:1;font-family:'DM Mono',monospace;font-size:7px;letter-spacing:.5px;text-transform:uppercase;}
+.gps-btn:hover{opacity:.9;}
+.gps-btn:active{transform:scale(.95);}
+.gps-btn span{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.5px;font-weight:500;}
 
-/* ═══════════════════════════════════════
-   CHIPS
-═══════════════════════════════════════ */
+/* SUB-LOCATION ITEMS */
+.sub-loc{
+  display:flex;align-items:center;gap:12px;
+  padding:11px 18px;border-top:1px solid var(--bdr);
+  background:#FEFEFE;
+}
+.sl-ico{font-size:17px;flex-shrink:0;}
+.sl-info{flex:1;min-width:0;}
+.sl-name{font-size:14px;font-weight:600;color:var(--ink);line-height:1.3;}
+.sl-desc{font-size:12px;color:var(--ink3);margin-top:2px;}
+/* GPS small blue for sub-locations */
+.gps-sm{
+  display:flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border-radius:10px;
+  background:var(--blue-bg);color:var(--blue);
+  text-decoration:none;flex-shrink:0;font-size:18px;
+  transition:opacity .15s;
+}
+.gps-sm:active{opacity:.7;}
+
+/* ─── CHIPS ─── */
 .chip{
   display:inline-flex;align-items:center;gap:3px;
-  font-size:9.5px;font-weight:600;letter-spacing:.5px;
-  text-transform:uppercase;padding:3px 8px;border-radius:20px;line-height:1;
+  font-size:10px;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;padding:3px 9px;border-radius:20px;line-height:1;
+  flex-shrink:0;
 }
-.c-eat  {background:rgba(245,200,66,.1);color:#F5C842;}
-.c-see  {background:rgba(79,142,247,.1);color:#4F8EF7;}
-.c-shop {background:rgba(255,126,179,.1);color:#FF7EB3;}
-.c-move {background:rgba(61,214,140,.1);color:#3DD68C;}
-.c-fun  {background:rgba(123,111,255,.1);color:#7B6FFF;}
-.c-stay {background:rgba(255,255,255,.06);color:#8B90A0;}
-.c-fly  {background:rgba(255,94,94,.1);color:#FF5E5E;}
-.c-warn {background:rgba(245,200,66,.12);color:#F5C842;}
+.c-eat  {background:var(--gold-bg);color:var(--gold);}
+.c-see  {background:var(--blue-bg);color:var(--blue);}
+.c-shop {background:var(--pink-bg);color:var(--pink);}
+.c-move {background:var(--green-bg);color:var(--green);}
+.c-fun  {background:var(--purple-bg);color:var(--purple);}
+.c-stay {background:var(--gray-bg);color:#4A5568;}
+.c-fly  {background:var(--red-bg);color:var(--red);}
+.c-warn {background:var(--gold-bg);color:var(--gold);}
 
-/* ═══════════════════════════════════════
-   SUMMARY / INFO BOX
-═══════════════════════════════════════ */
-.info-box{
-  background:var(--s2);border:1px solid var(--bdr);
-  border-radius:var(--r);padding:18px 20px;
-  margin-bottom:14px;
+/* ─── SOS FAB ─── */
+.sos-fab{
+  position:fixed;bottom:22px;right:18px;z-index:300;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;box-shadow:0 4px 20px rgba(217,48,37,.45);
+  cursor:pointer;border:none;font-family:inherit;
+  transition:transform .2s,box-shadow .2s;
 }
-.info-box h3{
-  font-size:13px;font-weight:700;color:var(--tx);
-  margin-bottom:12px;display:flex;align-items:center;gap:8px;
-  padding-bottom:10px;border-bottom:1px solid var(--bdr);
-}
-.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.info-item{font-size:12px;color:var(--tx2);line-height:1.6;padding-left:14px;position:relative;}
-.info-item::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:10px;}
-.info-item strong{color:var(--tx);font-weight:600;}
+.sos-fab:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(217,48,37,.6);}
 
-/* Hotel info box */
-.hotel-card{
-  display:flex;align-items:center;gap:14px;
-  background:var(--s2);border:1px solid var(--bdr);
-  border-radius:var(--r);padding:16px 18px;
-  margin-bottom:14px;
-}
-.hotel-icon{font-size:28px;flex-shrink:0;}
-.hotel-info{flex:1;min-width:0;}
-.hotel-name{font-size:14px;font-weight:600;color:var(--tx);margin-bottom:3px;}
-.hotel-detail{font-size:11.5px;color:var(--tx2);}
-.hotel-nights{
-  font-family:'DM Mono',monospace;font-size:11px;
-  color:var(--accent);background:rgba(79,142,247,.1);
-  border-radius:6px;padding:4px 10px;white-space:nowrap;flex-shrink:0;
-}
-
-/* ═══════════════════════════════════════
-   EMERGENCY MODAL
-═══════════════════════════════════════ */
-.modal-overlay{
+/* ─── MODAL ─── */
+.modal-ov{
   display:none;position:fixed;inset:0;z-index:500;
-  background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);
+  background:rgba(0,0,0,.55);
   align-items:flex-end;justify-content:center;
+  backdrop-filter:blur(6px);
 }
-.modal-overlay.show{display:flex;}
+.modal-ov.show{display:flex;}
 .modal{
-  background:var(--s1);border:1px solid var(--bdr2);
-  border-radius:20px 20px 0 0;padding:24px 20px 40px;
-  width:100%;max-width:480px;
-  animation:slideUp .25s ease;
+  background:var(--card);border-radius:20px 20px 0 0;
+  padding:22px 18px 40px;width:100%;max-width:480px;
+  animation:mUp .24s ease;
 }
-@keyframes slideUp{from{transform:translateY(100%);}to{transform:translateY(0);}}
-.modal-handle{width:40px;height:4px;background:var(--bdr2);border-radius:2px;margin:0 auto 18px;}
-.modal h2{font-size:16px;font-weight:700;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+@keyframes mUp{from{transform:translateY(100%);}to{transform:translateY(0);}}
+.m-handle{width:40px;height:4px;background:var(--bdr2);border-radius:2px;margin:0 auto 18px;}
+.m-title{font-size:18px;font-weight:800;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.m-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
 .em-btn{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:6px;padding:16px 12px;border-radius:12px;
-  background:var(--s2);border:1px solid var(--bdr);
-  font-size:11.5px;color:var(--tx);text-align:center;
-  transition:all .2s;cursor:pointer;
+  gap:7px;padding:18px 12px;border-radius:14px;
+  background:var(--gray-bg);border:1.5px solid var(--bdr);
+  font-size:12.5px;color:var(--ink);text-align:center;
+  cursor:pointer;text-decoration:none;transition:all .18s;line-height:1.4;
 }
-.em-btn:hover{background:var(--s3);border-color:var(--bdr2);}
-.em-btn .e-icon{font-size:24px;}
-.em-close{
-  width:100%;padding:14px;border-radius:12px;
-  background:var(--s3);color:var(--tx2);font-size:13px;font-weight:600;
-  margin-top:6px;cursor:pointer;
-}
-.modal-close-x{
-  position:absolute;top:20px;right:20px;
-  width:32px;height:32px;border-radius:50%;
-  background:var(--s2);border:none;
-  display:flex;align-items:center;justify-content:center;
-  font-size:16px;color:var(--tx2);cursor:pointer;
+.em-btn:hover{background:var(--bdr);color:var(--ink);}
+.em-icon{font-size:26px;}
+.m-info{font-size:12px;color:var(--ink3);line-height:1.7;margin-bottom:12px;}
+.m-info strong{color:var(--ink2);}
+.m-close{
+  width:100%;padding:15px;border-radius:12px;
+  background:var(--gray-bg);border:1.5px solid var(--bdr);
+  color:var(--ink2);font-size:14px;font-weight:700;
+  cursor:pointer;font-family:inherit;
 }
 
-/* ═══════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════ */
-@media(max-width:640px){
-  .topnav-inner .nav-days{display:none;}
-  .day-tabs{display:flex;}
-  .hero{padding:36px 16px 24px;}
+/* ─── RESPONSIVE ─── */
+@media(max-width:600px){
+  .topnav .nav-days{display:none;}
+  .mob-tabs{display:flex;}
+  .act-row{grid-template-columns:80px 1fr 56px;padding:13px 14px;}
+  .day-badge{width:68px;}
+  .db-num{font-size:28px;}
+  .dm-title{font-size:15px;}
+  .hero{padding:32px 16px 22px;}
   .content{padding:0 14px 100px;}
-  .act{grid-template-columns:78px 1fr 48px;padding:12px 14px;}
-  .act-name{font-size:13px;}
-  .info-grid{grid-template-columns:1fr;}
-  .stats-row{gap:0;}
-  .stat-box{flex:1;padding:10px 8px;}
-  .stat-n{font-size:20px;}
-  .modal-grid{grid-template-columns:1fr 1fr;}
+  .tips-grid{grid-template-columns:1fr;}
+  .stats-row .stat-b{flex:1;padding:10px 8px;}
 }
-@media(min-width:641px){
-  .topnav-inner .nav-days{display:flex;}
-  .day-tabs{display:none;}
-  .act{grid-template-columns:100px 1fr 52px;}
-}
-@media(min-width:768px){
-  .act{grid-template-columns:110px 1fr 52px;}
-  .act-name{font-size:13.5px;}
+@media(min-width:601px){
+  .topnav .nav-days{display:flex;}
+  .mob-tabs{display:none;}
 }
 
-/* ═══ ANIM ═══ */
+/* ─── ANIMATIONS ─── */
 .day-wrap{animation:fadeUp .35s ease both;}
 .day-wrap:nth-child(1){animation-delay:.04s}
 .day-wrap:nth-child(2){animation-delay:.08s}
@@ -468,116 +434,102 @@ body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xm
 .day-wrap:nth-child(7){animation-delay:.28s}
 .day-wrap:nth-child(8){animation-delay:.32s}
 .day-wrap:nth-child(9){animation-delay:.36s}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
 </style>
 </head>
 <body>
 
-<div class="glow g1"></div>
-<div class="glow g2"></div>
-
-<!-- ═══ TOP NAV (desktop) ═══ -->
+<!-- TOPNAV -->
 <nav class="topnav">
-  <div class="topnav-inner">
-    <div class="nav-logo">🗾 Japan <em>2026</em></div>
+  <div class="nav-inner">
+    <div class="nav-logo">🗾 Japan <span>2026</span></div>
     <div class="nav-days">
-      <button class="nav-day-btn flight-day active" onclick="scrollToDay('d1',this)">✈ Day 1</button>
-      <button class="nav-day-btn" onclick="scrollToDay('d2',this)">☀ Day 2</button>
-      <button class="nav-day-btn" onclick="scrollToDay('d3',this)">☀ Day 3</button>
-      <button class="nav-day-btn" onclick="scrollToDay('d4',this)">☀ Day 4</button>
-      <button class="nav-day-btn" onclick="scrollToDay('d5',this)">🎠 Day 5</button>
-      <button class="nav-day-btn" onclick="scrollToDay('d6',this)">☀ Day 6</button>
-      <button class="nav-day-btn" onclick="scrollToDay('d7',this)">🗻 Day 7</button>
-      <button class="nav-day-btn" onclick="scrollToDay('d8',this)">☀ Day 8</button>
-      <button class="nav-day-btn flight-day" onclick="scrollToDay('d9',this)">✈ Day 9</button>
+      <button class="nd-btn fly active" onclick="goDay('d1',this)">✈ Day 1</button>
+      <button class="nd-btn" onclick="goDay('d2',this)">Day 2</button>
+      <button class="nd-btn" onclick="goDay('d3',this)">Day 3</button>
+      <button class="nd-btn" onclick="goDay('d4',this)">Day 4</button>
+      <button class="nd-btn" onclick="goDay('d5',this)">🎠 Day 5</button>
+      <button class="nd-btn" onclick="goDay('d6',this)">Day 6</button>
+      <button class="nd-btn" onclick="goDay('d7',this)">🗻 Day 7</button>
+      <button class="nd-btn" onclick="goDay('d8',this)">Day 8</button>
+      <button class="nd-btn fly" onclick="goDay('d9',this)">✈ Day 9</button>
     </div>
   </div>
 </nav>
 
-<!-- ═══ MOBILE DAY TABS ═══ -->
-<div class="day-tabs" id="mobileTabs">
-  <button class="day-tab active" onclick="scrollToDay('d1',this)">✈ 1</button>
-  <button class="day-tab" onclick="scrollToDay('d2',this)">2</button>
-  <button class="day-tab" onclick="scrollToDay('d3',this)">3</button>
-  <button class="day-tab" onclick="scrollToDay('d4',this)">4</button>
-  <button class="day-tab" onclick="scrollToDay('d5',this)">🎠 5</button>
-  <button class="day-tab" onclick="scrollToDay('d6',this)">6</button>
-  <button class="day-tab" onclick="scrollToDay('d7',this)">🗻 7</button>
-  <button class="day-tab" onclick="scrollToDay('d8',this)">8</button>
-  <button class="day-tab" onclick="scrollToDay('d9',this)">✈ 9</button>
+<!-- MOBILE TABS -->
+<div class="mob-tabs" id="mobTabs">
+  <button class="mt-btn fly active" onclick="goDay('d1',this)">✈1</button>
+  <button class="mt-btn" onclick="goDay('d2',this)">2</button>
+  <button class="mt-btn" onclick="goDay('d3',this)">3</button>
+  <button class="mt-btn" onclick="goDay('d4',this)">4</button>
+  <button class="mt-btn" onclick="goDay('d5',this)">🎠5</button>
+  <button class="mt-btn" onclick="goDay('d6',this)">6</button>
+  <button class="mt-btn" onclick="goDay('d7',this)">🗻7</button>
+  <button class="mt-btn" onclick="goDay('d8',this)">8</button>
+  <button class="mt-btn fly" onclick="goDay('d9',this)">✈9</button>
 </div>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">Japan Group Trip · 20 คน</div>
-  <h1 class="hero-title">Tokyo &amp;<br><em>Beyond</em></h1>
-  <div class="hero-sub">28 MAY – 05 JUN 2026 &nbsp;·&nbsp; 9 DAYS</div>
+  <div class="hero-ey">Japan Group Trip · 20 คน</div>
+  <h1 class="hero-h1">Tokyo &amp; <em>Beyond</em></h1>
+  <div class="hero-sub">28 MAY – 05 JUN 2026 · 9 DAYS</div>
   <div class="stats-row">
-    <div class="stat-box"><span class="stat-n">20</span><span class="stat-l">คน</span></div>
-    <div class="stat-box"><span class="stat-n">9</span><span class="stat-l">วัน</span></div>
-    <div class="stat-box"><span class="stat-n">7</span><span class="stat-l">คืน</span></div>
-    <div class="stat-box"><span class="stat-n">30+</span><span class="stat-l">สถานที่</span></div>
+    <div class="stat-b"><span class="stat-n">20</span><span class="stat-l">คน</span></div>
+    <div class="stat-b"><span class="stat-n">9</span><span class="stat-l">วัน</span></div>
+    <div class="stat-b"><span class="stat-n">7</span><span class="stat-l">คืน</span></div>
+    <div class="stat-b"><span class="stat-n">30+</span><span class="stat-l">สถานที่</span></div>
   </div>
-  <div class="flight-bar">
-    🛫 XJ 600 · DMK→NRT · 23:30 &nbsp;|&nbsp; 🛬 XJ 601 · NRT→DMK · 09:15
-  </div>
-  <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;">
-    <button onclick="shareLink()" style="display:flex;align-items:center;gap:7px;padding:9px 16px;background:var(--s2);border:1px solid var(--bdr2);border-radius:8px;color:var(--tx2);font-size:12px;font-family:'Noto Sans Thai',sans-serif;cursor:pointer;transition:all .2s;" onmouseover="this.style.color='var(--tx)'" onmouseout="this.style.color='var(--tx2)'">
-      <span>🔗</span> แชร์ลิงก์ให้เพื่อนร่วมทริป
-    </button>
-  </div>
-  <div class="alert-strip">
-    ⚠️ <span>กลุ่มใหญ่ 20 คน — แนะนำแบ่งเป็น 4 กลุ่ม (5 คน/กลุ่ม) เพื่อความคล่องตัว · หัวหน้ากลุ่มควรบันทึกเบอร์ฉุกเฉินก่อนเดินทาง</span>
-  </div>
+  <div class="flight-bar">🛫 XJ 600 · DMK→NRT · 23:30&nbsp;&nbsp;|&nbsp;&nbsp;🛬 XJ 601 · NRT→DMK · 09:15</div><br>
+  <button class="share-btn" onclick="shareMe()">🔗 แชร์ลิงก์ให้เพื่อนร่วมทริป</button>
+  <div class="alert-bar">⚠️ <span>กลุ่ม 20 คน แนะนำแบ่ง <strong>4 กลุ่ม (5 คน/กลุ่ม)</strong> เพื่อความคล่องตัวในการขึ้นรถไฟ · หัวหน้ากลุ่มบันทึกเบอร์ฉุกเฉินด้วย</span></div>
 </section>
 
-<!-- ═══ MAIN CONTENT ═══ -->
+<!-- CONTENT -->
 <main class="content">
 
-  <!-- HOTELS -->
-  <div class="sec-lbl">ที่พัก — Hotels</div>
+  <div class="sec-lbl">ที่พักตลอดทริป</div>
   <div class="hotel-card">
-    <div class="hotel-icon">🏨</div>
-    <div class="hotel-info">
-      <div class="hotel-name">Hotel Plus Hostel Tokyo Akihabara</div>
-      <div class="hotel-detail">อักษะฮะบาระ · เช็คอิน 29 พ.ค. &nbsp;·&nbsp; เช็คเอาท์ 4 มิ.ย.</div>
+    <div class="h-icon">🏨</div>
+    <div class="h-info">
+      <div class="h-name">Hotel Plus Hostel Tokyo Akihabara</div>
+      <div class="h-det">เช็คอิน 29 พ.ค. · เช็คเอาท์ 4 มิ.ย.</div>
     </div>
-    <a class="gps" href="https://maps.google.com/maps?q=35.6997,139.7786(Hotel+Akihabara+ที่พัก)" target="_blank" rel="noopener noreferrer" title="Hotel GPS">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span>Maps</span>
+    <a class="gps-btn" href="https://maps.app.goo.gl/XedVHJf1SWwyKPQb7" target="_blank" rel="noopener">
+      <span>📍</span><span>Maps</span>
     </a>
-    <div class="hotel-nights" style="margin-left:8px">6 คืน</div>
+    <div style="width:8px"></div>
+    <div class="h-nights">6 คืน</div>
   </div>
   <div class="hotel-card">
-    <div class="hotel-icon">🏨</div>
-    <div class="hotel-info">
-      <div class="hotel-name">APA Hotel Keisei Narita-Ekimae</div>
-      <div class="hotel-detail">นาริตะ · เช็คอิน 4 มิ.ย. &nbsp;·&nbsp; เช็คเอาท์ 5 มิ.ย. (เช้า)</div>
+    <div class="h-icon">🏨</div>
+    <div class="h-info">
+      <div class="h-name">APA Hotel Keisei Narita-Ekimae</div>
+      <div class="h-det">เช็คอิน 4 มิ.ย. · เช็คเอาท์ 5 มิ.ย. เช้า</div>
     </div>
-    <a class="gps" href="https://maps.google.com/maps?q=35.7848,140.3193(APA+Hotel+Narita)" target="_blank" rel="noopener noreferrer" title="APA Hotel GPS">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span>Maps</span>
+    <a class="gps-btn" href="https://maps.app.goo.gl/kxGWnBFHVrfG8XHNA" target="_blank" rel="noopener">
+      <span>📍</span><span>Maps</span>
     </a>
-    <div class="hotel-nights" style="margin-left:8px">1 คืน</div>
+    <div style="width:8px"></div>
+    <div class="h-nights">1 คืน</div>
   </div>
 
-  <!-- GROUP TIPS -->
-  <div class="sec-lbl">คำแนะนำสำหรับกลุ่ม 20 คน</div>
-  <div class="info-box">
-    <h3>📋 สิ่งที่กลุ่มควรรู้ก่อนออกเดินทาง</h3>
-    <div class="info-grid">
-      <div class="info-item"><strong>IC Card (Suica/Pasmo)</strong><br>ซื้อที่สนามบินทันที เติมเงิน ¥3,000–5,000 ต่อคน ใช้ขึ้นรถไฟและร้านสะดวกซื้อได้</div>
-      <div class="info-item"><strong>แบ่งกลุ่ม 4–5 คน</strong><br>กลุ่มใหญ่ 20 คน ขึ้นรถไฟพร้อมกันยาก ควรแบ่งย่อยและนัดจุดรวมพล</div>
-      <div class="info-item"><strong>App ที่ต้องโหลด</strong><br>Google Maps + Google Translate (ถ่ายรูปอ่านภาษาญี่ปุ่นได้) + Japan Official Travel App</div>
-      <div class="info-item"><strong>นัดจุดรวมพล</strong><br>กำหนดจุดนัดหมายชัดเจนทุกวัน เช่น หน้าประตูใหญ่หรือ Exit กี่ของสถานี</div>
-      <div class="info-item"><strong>Pocket WiFi / SIM</strong><br>ต้องมีทุกคนหรือทุกกลุ่มย่อย อย่าพึ่งแชร์สัญญาณรายเดียว</div>
-      <div class="info-item"><strong>Disneyland (Day 5)</strong><br>⚠️ จองตั๋วออนไลน์ล่วงหน้าทุกคน Tokyo Disney Resort App จำเป็นมาก</div>
-      <div class="info-item"><strong>เงินสด</strong><br>ร้านบางแห่งรับเฉพาะเงินสด เตรียม ¥10,000–20,000 ต่อคนไว้เสมอ</div>
-      <div class="info-item"><strong>ฟูจิ Day Trip (Day 7)</strong><br>ออกแต่เช้า 06:00 ต้องประสานให้ครบทุกคนก่อน Bus ออก</div>
+  <div class="sec-lbl">คำแนะนำกลุ่ม 20 คน</div>
+  <div class="tips-box">
+    <h3>📋 สิ่งที่ต้องรู้ก่อนออกเดินทาง</h3>
+    <div class="tips-grid">
+      <div class="tip-item"><strong>IC Card (Suica/Pasmo)</strong> ซื้อที่สนามบินทันที เติม ¥3,000–5,000 ใช้รถไฟและร้านสะดวกซื้อ</div>
+      <div class="tip-item"><strong>แบ่ง 4 กลุ่ม</strong> (5 คน/กลุ่ม) กำหนดจุดนัดหมายชัดเจนทุกวัน</div>
+      <div class="tip-item"><strong>App ที่ต้องโหลด</strong> Google Maps · Google Translate · Japan Official Travel App</div>
+      <div class="tip-item"><strong>Pocket WiFi/SIM</strong> ต้องมีทุกกลุ่มย่อย อย่าพึ่งแชร์สัญญาณรายเดียว</div>
+      <div class="tip-item"><strong>Disneyland (Day 5)</strong> จองตั๋วออนไลน์ล่วงหน้าทุกคน ผ่าน Tokyo Disney App</div>
+      <div class="tip-item"><strong>เงินสด</strong> เตรียม ¥10,000–20,000/คน ร้านหลายแห่งไม่รับบัตร</div>
+      <div class="tip-item"><strong>ฟูจิ Day Trip (Day 7)</strong> ออก 06:00 ต้องประสานทุกคนก่อน Bus ออก</div>
+      <div class="tip-item"><strong>ของหาย/แยกหาย</strong> นัดจุด Fallback ทุกวัน เช่น หน้าสถานีรถไฟ</div>
     </div>
   </div>
 
-  <!-- LEGEND -->
   <div class="sec-lbl">ประเภทกิจกรรม</div>
   <div class="legend">
     <span class="chip c-eat">🍽 กิน</span>
@@ -586,710 +538,664 @@ body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xm
     <span class="chip c-move">🚃 เดินทาง</span>
     <span class="chip c-fun">⭐ ไฮไลท์</span>
     <span class="chip c-stay">🏨 ที่พัก</span>
-    <span class="chip c-fly">✈ เที่ยวบิน</span>
-    <span class="chip c-warn">⚠ สำคัญ</span>
+    <span class="chip c-fly">✈ บิน</span>
   </div>
 
-  <div class="sec-lbl">แผนวันต่อวัน — กดที่การ์ดเพื่อขยาย · กด 📍 เพื่อเปิด Google Maps</div>
+  <div class="sec-lbl">แผนวันต่อวัน — กดการ์ดเพื่อขยาย · กด 📍 เปิด Google Maps</div>
 
-  <!-- ════════════════════════════
+  <!-- ══════════════════════════════
        DAY 1
-  ════════════════════════════ -->
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d1">
-    <div class="day-card is-flight open">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">1</span><span class="dn-d">THU</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">✈️ ออกเดินทาง <span class="chip c-fly">XJ 600</span></div>
-          <div class="dh-date">28 MAY 2026 · พฤหัสบดี</div>
-          <div class="dh-preview">Don Mueang → Narita · 23:30</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card is-fly open">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">1</span><span class="db-dow">THU</span>
       </div>
-      <div class="day-body">
-        <div class="act">
+      <div class="day-meta">
+        <div class="dm-title">✈️ ออกเดินทาง <span class="chip c-fly">XJ 600</span></div>
+        <div class="dm-date">28 MAY 2026 · พฤหัสบดี</div>
+        <div class="dm-prev">Don Mueang → Narita · 23:30</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">23:30</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🛫</span>Don Mueang Airport (DMK) <span class="chip c-fly">Departure</span></div>
-            <div class="act-desc">Terminal ผู้โดยสารขาออก · เช็คอินก่อน 3 ชั่วโมง (~20:30) · รวมพลที่ Counter XJ ก่อนเวลา</div>
-            <div class="warn-pill">⚠ นัดรวมพลทุกคน เวลา 20:00 บริเวณ Check-in Zone</div>
+            <div class="act-name"><span class="act-ico">🛫</span>Don Mueang Airport (DMK) <span class="chip c-fly">Departure</span></div>
+            <div class="act-desc">เช็คอินก่อน 3 ชั่วโมง (~20:30) · นัดรวมพลทุกคน Counter XJ</div>
+            <div class="warn-p">⚠️ รวมพลบริเวณ Counter XJ เวลา 20:00</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=13.9126,100.6067(Don+Mueang+Airport+DMK)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/N3j8kfMWGTY6xUmV8" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- ════════════════════════════
+  <!-- ══════════════════════════════
        DAY 2
-  ════════════════════════════ -->
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d2">
-    <div class="day-card open">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">2</span><span class="dn-d">FRI</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">🛬 มาถึง + อุเอโนะ <span class="chip c-see">Culture</span></div>
-          <div class="dh-date">29 MAY 2026 · ศุกร์</div>
-          <div class="dh-preview">Narita → Akihabara · Ueno Park · Ameyoko</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card open">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">2</span><span class="db-dow">FRI</span>
       </div>
-      <div class="day-body">
-        <div class="act">
+      <div class="day-meta">
+        <div class="dm-title">🛬 มาถึงโตเกียว + อุเอโนะ <span class="chip c-see">Culture</span></div>
+        <div class="dm-date">29 MAY 2026 · ศุกร์</div>
+        <div class="dm-prev">Narita → Akihabara · Ueno Park · Ameyoko</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">08:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🛬</span>Narita International Airport — Terminal 2</div>
-            <div class="act-desc">ผ่านพิธีตรวจคนเข้าเมือง · ซื้อ IC Card (Suica) ที่เครื่อง Ticket Machine</div>
-            <div class="warn-pill">⚠ ซื้อ Suica ทุกคนก่อนออกจากสนามบิน</div>
+            <div class="act-name"><span class="act-ico">🛬</span>Narita International Airport <span class="chip c-move">มาถึง</span></div>
+            <div class="act-desc">ผ่านตรวจคนเข้าเมือง · ซื้อ Suica ที่เครื่อง Ticket Machine ชั้น 1</div>
+            <div class="warn-p">⚠️ ซื้อ Suica ทุกคนก่อนออกจากสนามบิน</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7720,140.3929(Narita+Airport+NRT)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/6D6Jbj3MvXH6YDGF8" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">09:00–10:30</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🚃</span>Asakusabashi Station <span class="chip c-move">รถไฟ</span></div>
-            <div class="route-pill"><span class="ricon">🚇</span>Keisei Line → Asakusabashi Sta. (สถานีปลายทาง)</div>
+            <div class="act-name"><span class="act-ico">🚃</span>Asakusabashi Station <span class="chip c-move">รถไฟ</span></div>
+            <div class="route-p">🚇 Keisei Line → Asakusabashi Sta.</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6982,139.7872(Asakusabashi+Station)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/vBWpwCVk2P7kQv8s8" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">11:00–11:30</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🏨</span>Hotel Plus Hostel Tokyo Akihabara <span class="chip c-stay">Check-in</span></div>
-            <div class="act-desc">วางกระเป๋า · นัดรวมพลหน้าล็อบบี้เวลา 11:30</div>
+            <div class="act-name"><span class="act-ico">🏨</span>Hotel Plus Hostel Tokyo Akihabara <span class="chip c-stay">Check-in</span></div>
+            <div class="act-desc">วางกระเป๋า · นัดรวมพลหน้าล็อบบี้ 11:30</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6997,139.7786(Hotel+Akihabara+ที่พัก)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/XedVHJf1SWwyKPQb7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">11:30–13:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🍱</span>Sendai Tanya Rikyu — Gransta Yaesu <span class="chip c-eat">Lunch</span></div>
-            <div class="act-desc">ร้านเนื้อวัว Sendai ใน Tokyo Station · Gransta Yaesu ชั้น B1</div>
+            <div class="act-name"><span class="act-ico">🍱</span>Sendai Tanya Rikyu — Gransta Yaesu <span class="chip c-eat">Lunch</span></div>
+            <div class="act-desc">ร้านเนื้อวัว Sendai ใน Tokyo Station · ชั้น B1 Gransta Yaesu</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6812,139.7671(Tokyo+Station)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/FYQAtF3uvXr8zeia8" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">13:00–16:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🌳</span>Ueno Park <span class="chip c-see">ชม</span></div>
-            <div class="act-desc">• National Museum of Western Art &nbsp;• National Museum of Nature and Science &nbsp;• Statue of Saigō Takamori &nbsp;• Kappa-Bashi Kitchen Town</div>
-            <div class="route-pill"><span class="ricon">🚶</span>เดินจาก Ueno Station</div>
+            <div class="act-name"><span class="act-ico">🌳</span>Ueno Park <span class="chip c-see">ชม</span></div>
+            <div class="act-desc">สวนสาธารณะใหญ่ · พิพิธภัณฑ์ · รูปปั้น · ตลาด</div>
+            <div class="route-p">🚶 เดิน Ueno Station</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7148,139.7740(Ueno+Park)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/oKYBHBCfBx8g71Kd9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
-          <div class="act-body">
-            <div class="act-name"><span class="ico">🖼</span>National Museum of Western Art <span class="chip c-see">พิพิธภัณฑ์</span></div>
+        <!-- Sub-locations inside Ueno -->
+        <div class="sub-loc">
+          <span class="sl-ico">🖼</span>
+          <div class="sl-info"><div class="sl-name">National Museum of Western Art</div></div>
+          <a class="gps-sm" href="https://maps.app.goo.gl/i4mMdaQRVhC2Lsje7" target="_blank" rel="noopener">📍</a>
+        </div>
+        <div class="sub-loc">
+          <span class="sl-ico">🦕</span>
+          <div class="sl-info"><div class="sl-name">Museum of Nature and Science</div></div>
+          <a class="gps-sm" href="https://maps.app.goo.gl/8R5ky6DJL4kMcZcz9" target="_blank" rel="noopener">📍</a>
+        </div>
+        <div class="sub-loc">
+          <span class="sl-ico">🗿</span>
+          <div class="sl-info"><div class="sl-name">Statue of Saigō Takamori</div></div>
+          <a class="gps-sm" href="https://maps.app.goo.gl/fSmh8P7P3KAMt7Yb7" target="_blank" rel="noopener">📍</a>
+        </div>
+        <div class="sub-loc">
+          <span class="sl-ico">🍳</span>
+          <div class="sl-info">
+            <div class="sl-name">Kappa-Bashi Kitchen Town</div>
+            <div class="sl-desc">อุปกรณ์ครัว โมเดลอาหาร ของสะสม</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7155,139.7754(Museum+of+Western+Art+Ueno)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-sm" href="https://maps.app.goo.gl/1Y8pKfKJNmxG1Gcq5" target="_blank" rel="noopener">📍</a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
-          <div class="act-body">
-            <div class="act-name"><span class="ico">🦕</span>National Museum of Nature and Science <span class="chip c-see">พิพิธภัณฑ์</span></div>
-          </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7164,139.7763(Museum+of+Nature+and+Science)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
-        </div>
-        <div class="act">
-          <div class="act-time"></div>
-          <div class="act-body">
-            <div class="act-name"><span class="ico">🍳</span>Kappa-Bashi (Kitchen Town) <span class="chip c-shop">ช็อป</span></div>
-            <div class="act-desc">ย่านขายอุปกรณ์ครัว ของตกแต่งอาหาร โมเดลอาหารพลาสติก</div>
-          </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7147,139.7952(Kappabashi+Kitchen+Town)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
-        </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">16:00–17:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🛍️</span>Ameyoko Market <span class="chip c-shop">ช็อป</span></div>
-            <div class="act-desc">ตลาดกลางแจ้ง 70 ปี อาหาร ของสด เสื้อผ้า น้ำหอม · ติด Ueno Station</div>
+            <div class="act-name"><span class="act-ico">🛍️</span>Ameyoko Market <span class="chip c-shop">ช็อป</span></div>
+            <div class="act-desc">ตลาดกลางแจ้ง 70 ปี · อาหาร ของสด เสื้อผ้า น้ำหอม</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7089,139.7745(Ameyoko+Market)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/RVQFmpj7rkPbDMiU8" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">18:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🍜</span>Dinner ที่ Hostel <span class="chip c-eat">Dinner</span></div>
+            <div class="act-name"><span class="act-ico">🍜</span>Dinner ที่ Hostel <span class="chip c-eat">Dinner</span></div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6997,139.7786(Hotel+Akihabara+ที่พัก)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/XedVHJf1SWwyKPQb7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- ════ DAY 3 ════ -->
+  <!-- ══════════════════════════════
+       DAY 3
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d3">
-    <div class="day-card">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">3</span><span class="dn-d">SAT</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">🎪 Flea Market + BOOKOFF Omori <span class="chip c-shop">Shopping</span></div>
-          <div class="dh-date">30 MAY 2026 · เสาร์</div>
-          <div class="dh-preview">Tokyo City Flea Market → BOOKOFF Super Bazaar Omori</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">3</span><span class="db-dow">SAT</span>
       </div>
-      <div class="day-body">
-        <div class="act">
+      <div class="day-meta">
+        <div class="dm-title">🎪 Flea Market + BOOKOFF Omori <span class="chip c-shop">Shopping</span></div>
+        <div class="dm-date">30 MAY 2026 · เสาร์</div>
+        <div class="dm-prev">Tokyo City Flea Market → BOOKOFF Super Bazaar Omori</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">08:00–12:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🎪</span>Tokyo City Flea Market <span class="chip c-shop">ช็อป</span></div>
-            <div class="act-desc">ตลาดนัดของเก่า vintage ของสะสม เสื้อผ้า — เปิดเช้า ปิดเที่ยง</div>
-            <div class="route-pill"><span class="ricon">🚇</span>Akihabara → Keihin-Tōhoku → Hamamatsuchō → Monorail → Oikeibajo-Mae</div>
-            <div class="warn-pill">⚠ ตรวจสอบวันจัดงานล่วงหน้า บางเดือนอาจเลื่อน</div>
+            <div class="act-name"><span class="act-ico">🎪</span>Tokyo City Flea Market <span class="chip c-shop">ช็อป</span></div>
+            <div class="act-desc">ตลาดนัดของเก่า vintage · เปิดเช้า ปิดเที่ยง</div>
+            <div class="route-p">🚇 Akihabara → Keihin-Tōhoku → Hamamatsuchō → Monorail → Oikeibajo-Mae</div>
+            <div class="warn-p">⚠️ ตรวจสอบวันจัดงานล่วงหน้า</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6441,139.7556(Tokyo+City+Flea+Market)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/oHKjJLRpb2XBMJ1c7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">12:00–13:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🍱</span>Lunch บริเวณ Flea Market / Omori <span class="chip c-eat">Lunch</span></div>
+            <div class="act-name"><span class="act-ico">🍱</span>Lunch บริเวณ Omori <span class="chip c-eat">Lunch</span></div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.5973,139.7361(BOOKOFF+SUPER+BAZAAR+Omori)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/wSDWsbbpgXJC9X6R9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">13:00–17:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">📚</span>BOOKOFF SUPER BAZAAR SEIYU Omori <span class="chip c-shop">ช็อป</span></div>
-            <div class="act-desc">หนังสือ เกม CD DVD เสื้อผ้า มือสอง ราคาถูก — หลายชั้น</div>
-            <div class="route-pill"><span class="ricon">🚶</span>เดินจาก Omori Station</div>
+            <div class="act-name"><span class="act-ico">📚</span>BOOKOFF SUPER BAZAAR SEIYU Omori <span class="chip c-shop">ช็อป</span></div>
+            <div class="act-desc">หนังสือ เกม CD DVD เสื้อผ้า มือสอง ราคาถูก</div>
+            <div class="route-p">🚶 เดินจาก Omori Station</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.5973,139.7361(BOOKOFF+SUPER+BAZAAR+Omori)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/wSDWsbbpgXJC9X6R9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">18:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🍜</span>Dinner ที่ Hostel <span class="chip c-eat">Dinner</span></div>
+            <div class="act-name"><span class="act-ico">🍜</span>Dinner ที่ Hostel <span class="chip c-eat">Dinner</span></div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6997,139.7786(Hotel+Akihabara+ที่พัก)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/XedVHJf1SWwyKPQb7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- ════ DAY 4 ════ -->
+  <!-- ══════════════════════════════
+       DAY 4
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d4">
-    <div class="day-card">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">4</span><span class="dn-d">SUN</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">⛩️ วิ่ง + อาซากุสะ + Nakano + Shimokitazawa</div>
-          <div class="dh-date">31 MAY 2026 · อาทิตย์</div>
-          <div class="dh-preview">Imperial Palace → Sensō-ji → Nakano Broadway → Shimokitazawa</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">4</span><span class="db-dow">SUN</span>
       </div>
-      <div class="day-body">
-        <div class="act">
+      <div class="day-meta">
+        <div class="dm-title">⛩️ วิ่ง + อาซากุสะ + Nakano + Shimokitazawa</div>
+        <div class="dm-date">31 MAY 2026 · อาทิตย์</div>
+        <div class="dm-prev">Imperial Palace → Sensō-ji → Nakano → Shimokitazawa</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">08:00–10:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🏃</span>วิ่งรอบ Imperial Palace <span class="chip c-fun">Active</span></div>
-            <div class="act-desc">ระยะ ~5 กม. รอบพระราชวัง วิวสวยมาก — เตรียมรองเท้าวิ่ง</div>
+            <div class="act-name"><span class="act-ico">🏃</span>วิ่งรอบ Imperial Palace <span class="chip c-fun">Active</span></div>
+            <div class="act-desc">ระยะ ~5 กม. วิวสวย · เตรียมรองเท้าวิ่ง</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6852,139.7528(Imperial+Palace+Running+Course)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/3A5fYKsNHLUGpUmr5" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">10:00–12:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">⛩️</span>Asakusa Temple — Sensō-ji <span class="chip c-see">ชม</span></div>
-            <div class="act-desc">วัดเก่าแก่ที่สุดในโตเกียว · Kaminarimon ประตูฟ้าผ่า · Nakamise-dori ถนนของที่ระลึก</div>
+            <div class="act-name"><span class="act-ico">⛩️</span>Asakusa Temple — Sensō-ji <span class="chip c-see">ชม</span></div>
+            <div class="act-desc">วัดเก่าแก่สุด · Kaminarimon · Nakamise-dori ถนนของที่ระลึก</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7148,139.7967(Senso-ji+Temple+Asakusa)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/ZxS5NJ5kE8R9LXVP7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">12:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🥩</span>Asakusa Gyukatsu <span class="chip c-eat">Lunch</span></div>
-            <div class="act-desc">ทงคัตสึเนื้อวัว ย่างบนหินร้อนเอง · ร้านดัง มีคิว ควรไปเช้า</div>
+            <div class="act-name"><span class="act-ico">🥩</span>Asakusa Gyukatsu <span class="chip c-eat">Lunch</span></div>
+            <div class="act-desc">ทงคัตสึเนื้อวัว ย่างบนหินร้อนเอง · มีคิว ควรไปเช้า</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7119,139.7985(Asakusa+Gyukatsu)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/tCN12Z6NZgeFUCiL7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">13:00–17:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🎌</span>Nakano Broadway <span class="chip c-shop">ช็อป</span></div>
-            <div class="act-desc">สวรรค์ Anime · Manga · Figure · Vintage หลายชั้น · ร้าน Mandarake ชื่อดัง</div>
-            <div class="route-pill"><span class="ricon">🚇</span>Ueno → Keihin-Tōhoku → Kanda → Chūō Line → Nakano Station (เดิน 5 นาที)</div>
+            <div class="act-name"><span class="act-ico">🎌</span>Nakano Broadway <span class="chip c-shop">ช็อป</span></div>
+            <div class="act-desc">Anime · Manga · Figure · Vintage · Mandarake</div>
+            <div class="route-p">🚇 Ueno → Keihin-Tōhoku → Kanda → Chūō → Nakano (เดิน 5 นาที)</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7082,139.6658(Nakano+Broadway)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/uE3gKBh3pkLpqYXR7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
+      </div>
+      <div class="act">
+        <div class="act-row">
+          <div class="act-time">ช่วงบ่าย</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🎵</span>Shimokitazawa <span class="chip c-see">บรรยากาศ</span></div>
-            <div class="act-desc">ย่าน Vintage Shop · Live Music · Café Bohemian บรรยากาศหนุ่มสาว</div>
-            <div class="route-pill"><span class="ricon">🚇</span>Chūō → Shinjuku → Odakyu Line → Higashi-Kitazawa → เดิน</div>
+            <div class="act-name"><span class="act-ico">🎵</span>Shimokitazawa <span class="chip c-see">บรรยากาศ</span></div>
+            <div class="act-desc">Vintage Shop · Live Music · Café Bohemian</div>
+            <div class="route-p">🚇 Chūō → Shinjuku → Odakyu → Higashi-Kitazawa → เดิน</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6614,139.6685(Shimokitazawa)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/TJGnUSMjJPCcGoaW9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
+      </div>
+      <div class="act">
+        <div class="act-row">
+          <div class="act-time">ช่วงบ่าย</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">📚</span>BOOKOFF Ikebukuro <span class="chip c-shop">ช็อป</span></div>
+            <div class="act-name"><span class="act-ico">📚</span>BOOKOFF Ikebukuro <span class="chip c-shop">ช็อป</span></div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7298,139.7109(BOOKOFF+Ikebukuro)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/fL37tGMHCJVoF5s26" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">18:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🥩</span>Halal Wagyu Yakiniku Panga <span class="chip c-eat">Dinner</span></div>
-            <div class="act-desc">ยากินิกุวากิวฮาลาล · เนื้อคุณภาพสูง · เหมาะกลุ่มมีสมาชิก Muslim</div>
+            <div class="act-name"><span class="act-ico">🥩</span>Halal Wagyu Yakiniku Panga <span class="chip c-eat">Dinner</span></div>
+            <div class="act-desc">ยากินิกุวากิวฮาลาล · เนื้อคุณภาพสูง</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6940,139.7003(Halal+Wagyu+Yakiniku+Panga)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/cDXBcWVm5rUB1Ks78" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- ════ DAY 5 ════ -->
+  <!-- ══════════════════════════════
+       DAY 5
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d5">
-    <div class="day-card">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">5</span><span class="dn-d">MON</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">🎠 Tokyo Disneyland — ทั้งวัน <span class="chip c-fun">Highlight ⭐</span></div>
-          <div class="dh-date">1 JUN 2026 · จันทร์</div>
-          <div class="dh-preview">06:00 ออกเดินทาง · เล่นทั้งวัน</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">5</span><span class="db-dow">MON</span>
       </div>
-      <div class="day-body">
-        <div class="act">
+      <div class="day-meta">
+        <div class="dm-title">🎠 Tokyo Disneyland — ทั้งวัน <span class="chip c-fun">⭐ Highlight</span></div>
+        <div class="dm-date">1 JUN 2026 · จันทร์</div>
+        <div class="dm-prev">06:00 ออกเดิน → เล่นทั้งวัน</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">06:00–17:00+</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🎡</span>Tokyo Disneyland <span class="chip c-fun">ทั้งวัน</span></div>
-            <div class="act-desc">สวนสนุกที่ดีที่สุดในญี่ปุ่น · เตรียม Disney App ไว้จอง Premier Access</div>
-            <div class="warn-pill">⚠ จองตั๋วออนไลน์ล่วงหน้าทุกคน ก่อนวันเดินทาง — อาจเต็มได้</div>
-            <div class="route-pill"><span class="ricon">🚇</span>Akihabara → JR Keiyo Line → Maihama Station → เดิน 5 นาที</div>
+            <div class="act-name"><span class="act-ico">🎡</span>Tokyo Disneyland <span class="chip c-fun">ทั้งวัน</span></div>
+            <div class="act-desc">เตรียม Disney App สำหรับจอง Premier Access</div>
+            <div class="warn-p">⚠️ จองตั๋วออนไลน์ทุกคนก่อนวันเดินทาง!</div>
+            <div class="route-p">🚇 Akihabara → JR Keiyo Line → Maihama Station → เดิน 5 นาที</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6329,139.8804(Tokyo+Disneyland)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/1b3k2K4RKoQBJmAv6" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- ════ DAY 6 ════ -->
+  <!-- ══════════════════════════════
+       DAY 6
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d6">
-    <div class="day-card">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">6</span><span class="dn-d">TUE</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">🐟 Tsukiji + Harajuku + Shinjuku</div>
-          <div class="dh-date">2 JUN 2026 · อังคาร</div>
-          <div class="dh-preview">Tsukiji Fish Market → Meiji Jingū → Shinjuku</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">6</span><span class="db-dow">TUE</span>
       </div>
-      <div class="day-body">
-        <div class="act">
+      <div class="day-meta">
+        <div class="dm-title">🐟 Tsukiji + Harajuku + Shinjuku</div>
+        <div class="dm-date">2 JUN 2026 · อังคาร</div>
+        <div class="dm-prev">Tsukiji Fish Market → Meiji Jingū → Shinjuku</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">09:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🐟</span>Tsukiji Outer Market <span class="chip c-eat">กิน</span></div>
-            <div class="act-desc">ซูชิเช้า ข้าวหน้าไข่หอย หอยเชลล์ย่าง ทูน่าสด — ร้านอร่อยทุกร้าน</div>
-            <div class="route-pill"><span class="ricon">🚇</span>Asakusabashi (Asakusa Line) → Higashi-ginza Station</div>
+            <div class="act-name"><span class="act-ico">🐟</span>Tsukiji Outer Market <span class="chip c-eat">กิน</span></div>
+            <div class="act-desc">ซูชิเช้า ข้าวหน้าไข่หอย หอยเชลล์ย่าง ทูน่าสด</div>
+            <div class="route-p">🚇 Asakusabashi (Asakusa Line) → Higashi-ginza</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6654,139.7706(Tsukiji+Outer+Market)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/fW2PMGK5w1y9DQYM9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
+      </div>
+      <div class="act">
+        <div class="act-row">
+          <div class="act-time">บ่าย</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">👘</span>Harajuku — Takeshita Street <span class="chip c-shop">ช็อป</span></div>
-            <div class="act-desc">แฟชั่น Kawaii Crepe Street Food · ถนนสั้นแต่เต็มร้านค้า</div>
+            <div class="act-name"><span class="act-ico">👘</span>Harajuku — Takeshita Street <span class="chip c-shop">ช็อป</span></div>
+            <div class="act-desc">แฟชั่น Kawaii · Crepe Street Food</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6703,139.7026(Harajuku+Takeshita+Street)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/5kCxVGvCj1DLHbfY9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
+      </div>
+      <div class="act">
+        <div class="act-row">
+          <div class="act-time">บ่าย</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">⛩️</span>Meiji Jingū Shrine <span class="chip c-see">ชม</span></div>
-            <div class="act-desc">ศาลเจ้าจักรพรรดิ Meiji กลางป่าโอะยาชิ · เดินเข้าป่า 10 นาทีจาก Harajuku</div>
-            <div class="route-pill"><span class="ricon">🚶</span>เดิน 5 นาทีจาก Harajuku Station</div>
+            <div class="act-name"><span class="act-ico">⛩️</span>Meiji Jingū Shrine <span class="chip c-see">ชม</span></div>
+            <div class="act-desc">ศาลเจ้าจักรพรรดิ Meiji กลางป่า · เดิน 10 นาที</div>
+            <div class="route-p">🚶 เดิน 5 นาทีจาก Harajuku Station</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6764,139.6993(Meiji+Jingu+Shrine)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/rHGVfmWMmAdNfwmHA" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">ค่ำ</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🏙️</span>Shinjuku <span class="chip c-see">บรรยากาศ</span></div>
-            <div class="act-desc">Kabukicho · Golden Gai · Omoide Yokocho (ถนนอาหาร) · ชมวิวจาก Tokyo Metropolitan Government Building (ฟรี)</div>
-            <div class="route-pill"><span class="ricon">🚇</span>Harajuku → Yamanote Line → Shinjuku Station</div>
+            <div class="act-name"><span class="act-ico">🏙️</span>Shinjuku <span class="chip c-see">บรรยากาศ</span></div>
+            <div class="act-desc">Kabukicho · Golden Gai · Omoide Yokocho · ชมวิวฟรีจาก Tokyo Metropolitan Building</div>
+            <div class="route-p">🚇 Harajuku → Yamanote Line → Shinjuku</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6938,139.7036(Shinjuku)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/EagkMiApBDdMPwxh6" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- ════ DAY 7 ════ -->
+  <!-- ══════════════════════════════
+       DAY 7
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d7">
-    <div class="day-card">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">7</span><span class="dn-d">WED</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">🗻 Day Trip ภูเขาไฟฟูจิ <span class="chip c-fun">Highlight ⭐</span></div>
-          <div class="dh-date">3 JUN 2026 · พุธ</div>
-          <div class="dh-preview">Chureito → Ropeway → Oishi Park → Oshino Hakkai</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">7</span><span class="db-dow">WED</span>
       </div>
-      <div class="day-body">
-        <div class="act">
+      <div class="day-meta">
+        <div class="dm-title">🗻 Day Trip ภูเขาไฟฟูจิ <span class="chip c-fun">⭐ Highlight</span></div>
+        <div class="dm-date">3 JUN 2026 · พุธ</div>
+        <div class="dm-prev">Chureito → Ropeway → Oishi Park → Oshino Hakkai</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">06:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🚌</span>ออกจาก Tokyo → Kawaguchiko <span class="chip c-move">เดินทาง</span></div>
-            <div class="act-desc">Highway Bus จาก Shinjuku Expressway Bus Terminal (SEAT)</div>
-            <div class="route-pill"><span class="ricon">🚌</span>Highway Bus → Kawaguchiko Station (~2 ชม.)</div>
-            <div class="warn-pill">⚠ 20 คน — จองบัสล่วงหน้า! นัดรวมพลหน้า Hostel 05:45</div>
+            <div class="act-name"><span class="act-ico">🚌</span>Shinjuku Bus Terminal → Kawaguchiko <span class="chip c-move">เดินทาง</span></div>
+            <div class="act-desc">Shinjuku Expressway Bus Terminal (SEAT) ชั้น 4</div>
+            <div class="route-p">🚌 Highway Bus → Kawaguchiko Station (~2 ชม.)</div>
+            <div class="warn-p">⚠️ 20 คน จองบัสล่วงหน้า · นัดรวมพลหน้า Hostel 05:45</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6896,139.7006(Shinjuku+Bus+Terminal)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/k7zWv5zPiMzSLYzB6" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
+      </div>
+      <div class="act">
+        <div class="act-row">
+          <div class="act-time">เช้า</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">⛩️</span>Chureito Pagoda <span class="chip c-see">ชม</span></div>
-            <div class="act-desc">เจดีย์ 5 ชั้น วิวฟูจิ ไอคอนิกมาก · ขึ้นบันได ~400 ขั้น (15 นาที)</div>
+            <div class="act-name"><span class="act-ico">⛩️</span>Chureito Pagoda <span class="chip c-see">ชม</span></div>
+            <div class="act-desc">เจดีย์ 5 ชั้น + วิวฟูจิ · ขึ้นบันได ~400 ขั้น (15 นาที)</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.4978,138.8339(Chureito+Pagoda)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/qFrXBHi89WFNC4aR9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
+      </div>
+      <div class="act">
+        <div class="act-row">
+          <div class="act-time">สาย</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🚡</span>Mt. Fuji Panoramic Ropeway (Kachi Kachi) <span class="chip c-fun">ไฮไลท์</span></div>
-            <div class="act-desc">กระเช้าขึ้นยอดเขา Tenjo · วิว Kawaguchiko + ฟูจิ 360 องศา</div>
+            <div class="act-name"><span class="act-ico">🚡</span>Mt. Fuji Panoramic Ropeway <span class="chip c-fun">ไฮไลท์</span></div>
+            <div class="act-desc">กระเช้า Kachi Kachi · วิว Kawaguchiko + ฟูจิ 360°</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.5100,138.7600(Kawaguchiko+Ropeway)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/JZzHcVJAiGaRNqD67" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
-          <div class="act-time"></div>
+      </div>
+      <div class="act">
+        <div class="act-row">
+          <div class="act-time">บ่าย</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🌸</span>Oishi Park <span class="chip c-see">ชม</span></div>
-            <div class="act-desc">สวนริมทะเลสาบ Kawaguchiko · วิวฟูจิสะท้อนน้ำ · ถ่ายรูปสวยที่สุด</div>
+            <div class="act-name"><span class="act-ico">🌸</span>Oishi Park <span class="chip c-see">ชม</span></div>
+            <div class="act-desc">สวนริมทะเลสาบ Kawaguchiko · วิวฟูจิสะท้อนน้ำ</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.5134,138.7282(Oishi+Park+Kawaguchiko)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/A1Gg7M8DtRJ4d7HJ9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">–18:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">💧</span>Oshino Hakkai <span class="chip c-see">ชม</span></div>
-            <div class="act-desc">น้ำพุธรรมชาติ 8 แห่ง มาจากหิมะละลายบนฟูจิ · น้ำใสมาก · บ่อปลา</div>
+            <div class="act-name"><span class="act-ico">💧</span>Oshino Hakkai <span class="chip c-see">ชม</span></div>
+            <div class="act-desc">น้ำพุธรรมชาติ 8 แห่ง จากหิมะละลายบนฟูจิ · น้ำใสมาก</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.4714,138.8388(Oshino+Hakkai)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/qjbPJrRzgM2gPCap6" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- ════ DAY 8 ════ -->
+  <!-- ══════════════════════════════
+       DAY 8
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d8">
-    <div class="day-card">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">8</span><span class="dn-d">THU</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">🏨 Check-out + ย้ายสู่ Narita <span class="chip c-move">Transit</span></div>
-          <div class="dh-date">4 JUN 2026 · พฤหัสบดี</div>
-          <div class="dh-preview">Akihabara Check-out → Narita APA Hotel → AEON TOWN</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">8</span><span class="db-dow">THU</span>
       </div>
-      <div class="day-body">
-        <div class="act">
+      <div class="day-meta">
+        <div class="dm-title">🏨 Check-out + ย้ายสู่ Narita <span class="chip c-move">Transit</span></div>
+        <div class="dm-date">4 JUN 2026 · พฤหัสบดี</div>
+        <div class="dm-prev">Akihabara → Narita APA Hotel → AEON TOWN</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">09:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🏨</span>Check-out — Hotel Plus Hostel Akihabara <span class="chip c-stay">Check-out</span></div>
-            <div class="act-desc">วางกระเป๋าไว้ที่ Front Desk ได้ถ้ายังไม่ต้องการ · แจกห้องคืนกุญแจ</div>
+            <div class="act-name"><span class="act-ico">🏨</span>Check-out — Hotel Plus Hostel Akihabara <span class="chip c-stay">Check-out</span></div>
+            <div class="act-desc">วางกระเป๋าที่ Front Desk ได้ · คืนกุญแจ</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6997,139.7786(Hotel+Akihabara+ที่พัก)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/XedVHJf1SWwyKPQb7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">09:00–14:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🕊️</span>At your leisure — เวลาอิสระ</div>
-            <div class="act-desc">ช็อปสุดท้ายในโตเกียว · นัดรวมพลหน้า Hostel เวลา 13:30</div>
+            <div class="act-name"><span class="act-ico">🕊️</span>At your leisure — เวลาอิสระ</div>
+            <div class="act-desc">ช็อปสุดท้ายในโตเกียว · นัดรวมพลหน้า Hostel 13:30</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.6997,139.7786(Hotel+Akihabara+ที่พัก)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/XedVHJf1SWwyKPQb7" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">14:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🏨</span>Check-in — APA Hotel Keisei Narita-Ekimae <span class="chip c-stay">Check-in</span></div>
-            <div class="act-desc">โรงแรมติดสถานีรถไฟ Keisei-Narita — สะดวกมากวันเช้าบิน</div>
-            <div class="route-pill"><span class="ricon">🚇</span>Asakusabashi → Asakusa Line → Keisei-Narita Station (ออกทาง North Exit)</div>
+            <div class="act-name"><span class="act-ico">🏨</span>APA Hotel Keisei Narita-Ekimae <span class="chip c-stay">Check-in</span></div>
+            <div class="act-desc">ติดสถานีรถไฟ Keisei-Narita · สะดวกมากวันเช้าบิน</div>
+            <div class="route-p">🚇 Asakusabashi → Asakusa Line → Keisei-Narita Station (North Exit)</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7848,140.3193(APA+Hotel+Narita)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/kxGWnBFHVrfG8XHNA" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">16:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🛒</span>AEON TOWN NARITA <span class="chip c-shop">ช็อป</span></div>
-            <div class="act-desc">ซูเปอร์มาร์เก็ต ร้านอาหาร ช็อปของฝากสุดท้าย — เดินได้จากโรงแรม</div>
+            <div class="act-name"><span class="act-ico">🛒</span>AEON TOWN NARITA <span class="chip c-shop">ช็อป</span></div>
+            <div class="act-desc">ซูเปอร์มาร์เก็ต · ช็อปของฝากสุดท้าย · เดินจากโรงแรม</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7744,140.3105(AEON+TOWN+NARITA)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/aEon1gNjLkH7Zp1h9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">18:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🍣</span>Dinner: Gin-Ya หรือ Kawatoyo Annex <span class="chip c-eat">Dinner</span></div>
-            <div class="act-desc">ร้านอาหารดั้งเดิมใน Narita · Kawatoyo ขึ้นชื่อเรื่องปลาไหล (Unagi)</div>
+            <div class="act-name"><span class="act-ico">🍣</span>Gin-Ya หรือ Kawatoyo Annex <span class="chip c-eat">Dinner</span></div>
+            <div class="act-desc">ร้านดั้งเดิมใน Narita · Kawatoyo ขึ้นชื่อเรื่องปลาไหล (Unagi)</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7766,140.3168(Kawatoyo+Restaurant+Narita)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/VRmaBBUZHJww8dJr9" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- ════ DAY 9 ════ -->
+  <!-- ══════════════════════════════
+       DAY 9
+  ══════════════════════════════ -->
   <div class="day-wrap" id="d9">
-    <div class="day-card is-flight">
-      <div class="day-header" onclick="toggle(this)">
-        <div class="day-num"><span class="dn-lbl">Day</span><span class="dn-n">9</span><span class="dn-d">FRI</span></div>
-        <div class="day-hinfo">
-          <div class="dh-title">✈️ เดินทางกลับ DMK <span class="chip c-fly">XJ 601</span></div>
-          <div class="dh-date">5 JUN 2026 · ศุกร์</div>
-          <div class="dh-preview">Narita Airport · 09:15 → Bangkok DMK</div>
-        </div>
-        <div class="day-chevron">⌄</div>
+  <div class="day-card is-fly">
+    <div class="day-hdr" onclick="tog(this)">
+      <div class="day-badge">
+        <span class="db-lbl">Day</span><span class="db-num">9</span><span class="db-dow">FRI</span>
       </div>
-      <div class="day-body">
-        <div class="act">
-          <div class="act-time">06:00–06:15</div>
+      <div class="day-meta">
+        <div class="dm-title">✈️ เดินทางกลับ DMK <span class="chip c-fly">XJ 601</span></div>
+        <div class="dm-date">5 JUN 2026 · ศุกร์</div>
+        <div class="dm-prev">Narita Airport · 09:15 → Bangkok DMK</div>
+      </div>
+      <div class="day-chev">⌄</div>
+    </div>
+    <div class="day-body">
+      <div class="act">
+        <div class="act-row">
+          <div class="act-time">06:00</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">🚃</span>เดินทางสู่ Narita Airport Terminal 2 <span class="chip c-move">เดินทาง</span></div>
-            <div class="route-pill"><span class="ricon">🚇</span>Keisei-Narita → Keisei Line → Narita Airport T2•3 Station → เดิน</div>
-            <div class="warn-pill">⚠ ควรถึงสนามบินก่อน 3 ชั่วโมง = 06:15 AM อย่างช้า</div>
+            <div class="act-name"><span class="act-ico">🚃</span>เดินทางสู่ Narita Airport T2 <span class="chip c-move">เดินทาง</span></div>
+            <div class="route-p">🚇 Keisei-Narita → Keisei Line → Narita Airport T2•3 → เดิน</div>
+            <div class="warn-p">⚠️ ถึงสนามบินก่อน 3 ชั่วโมง = 06:15 AM อย่างช้า</div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7720,140.3929(Narita+Airport+NRT)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/6D6Jbj3MvXH6YDGF8" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
-        <div class="act">
+      </div>
+      <div class="act">
+        <div class="act-row">
           <div class="act-time">09:15</div>
           <div class="act-body">
-            <div class="act-name"><span class="ico">✈️</span>เที่ยวบิน XJ 601 — NRT → DMK <span class="chip c-fly">กลับบ้าน</span></div>
+            <div class="act-name"><span class="act-ico">✈️</span>เที่ยวบิน XJ 601 — NRT → DMK <span class="chip c-fly">กลับบ้าน</span></div>
           </div>
-          <a class="gps" href="https://maps.google.com/maps?q=35.7720,140.3929(Narita+Airport+NRT)" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Maps</span>
-          </a>
+          <a class="gps-btn" href="https://maps.app.goo.gl/6D6Jbj3MvXH6YDGF8" target="_blank" rel="noopener"><span>📍</span><span>Maps</span></a>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
 </main>
 
-<!-- ═══ EMERGENCY FAB ═══ -->
-<button class="sos-fab" onclick="openModal()" title="ข้อมูลฉุกเฉิน">🆘</button>
+<!-- SOS FAB -->
+<button class="sos-fab" onclick="openSOS()" aria-label="ข้อมูลฉุกเฉิน">🆘</button>
 
-<!-- ═══ EMERGENCY MODAL ═══ -->
-<div class="modal-overlay" id="modal" onclick="closeModalOutside(event)">
+<!-- MODAL -->
+<div class="modal-ov" id="modalOv" onclick="closeSOS(event)">
   <div class="modal">
-    <div class="modal-handle"></div>
-    <h2>🆘 ข้อมูลฉุกเฉิน</h2>
-    <div class="modal-grid">
-      <a class="em-btn" href="tel:+81110">
-        <span class="e-icon">👮</span>
-        <span><strong>110</strong><br>ตำรวจ (Police)</span>
-      </a>
-      <a class="em-btn" href="tel:+81119">
-        <span class="e-icon">🚒</span>
-        <span><strong>119</strong><br>เพลิง/พยาบาล</span>
-      </a>
-      <a class="em-btn" href="https://maps.google.com/maps?q=35.6997,139.7786(Hotel+Akihabara+ที่พัก)" target="_blank" rel="noopener noreferrer">
-        <span class="e-icon">🏨</span>
-        <span>Hotel Akihabara<br>GPS ที่พักหลัก</span>
-      </a>
-      <a class="em-btn" href="https://maps.google.com/maps?q=35.7848,140.3193(APA+Hotel+Narita)" target="_blank" rel="noopener noreferrer">
-        <span class="e-icon">🏨</span>
-        <span>APA Narita<br>GPS ที่พัก Narita</span>
-      </a>
-      <a class="em-btn" href="https://maps.google.com/maps?q=35.6812,139.7671(Tokyo+Station)" target="_blank" rel="noopener noreferrer">
-        <span class="e-icon">🚉</span>
-        <span>Tokyo Station<br>สถานีกลาง</span>
-      </a>
-      <a class="em-btn" href="https://maps.google.com/maps?q=35.7720,140.3929(Narita+Airport+NRT)" target="_blank" rel="noopener noreferrer">
-        <span class="e-icon">✈️</span>
-        <span>Narita Airport<br>สนามบิน NRT</span>
-      </a>
+    <div class="m-handle"></div>
+    <div class="m-title">🆘 ข้อมูลฉุกเฉิน</div>
+    <div class="m-grid">
+      <a class="em-btn" href="tel:+81110"><span class="em-icon">👮</span><strong>110</strong><span>ตำรวจ</span></a>
+      <a class="em-btn" href="tel:+81119"><span class="em-icon">🚑</span><strong>119</strong><span>พยาบาล/เพลิง</span></a>
+      <a class="em-btn" href="https://maps.app.goo.gl/XedVHJf1SWwyKPQb7" target="_blank" rel="noopener"><span class="em-icon">🏨</span><span>Hotel Akihabara<br>ที่พักหลัก</span></a>
+      <a class="em-btn" href="https://maps.app.goo.gl/kxGWnBFHVrfG8XHNA" target="_blank" rel="noopener"><span class="em-icon">🏨</span><span>APA Hotel Narita<br>ที่พักคืนสุดท้าย</span></a>
+      <a class="em-btn" href="https://maps.app.goo.gl/6D6Jbj3MvXH6YDGF8" target="_blank" rel="noopener"><span class="em-icon">✈️</span><span>Narita Airport<br>สนามบิน NRT</span></a>
+      <a class="em-btn" href="https://maps.app.goo.gl/N3j8kfMWGTY6xUmV8" target="_blank" rel="noopener"><span class="em-icon">✈️</span><span>DMK Airport<br>สนามบินกลับ</span></a>
     </div>
-    <div style="font-size:11px;color:var(--tx3);margin-bottom:12px;line-height:1.6;">
-      📞 Embassy of Thailand in Japan: <strong style="color:var(--tx2)">+81-3-3447-2247</strong><br>
-      🏥 Tokyo English Lifeline: <strong style="color:var(--tx2)">03-5774-0992</strong>
+    <div class="m-info">
+      📞 สถานทูตไทยในญี่ปุ่น: <strong>+81-3-3447-2247</strong><br>
+      🏥 Tokyo English Lifeline: <strong>03-5774-0992</strong>
     </div>
-    <button class="em-close" onclick="closeModal()">ปิด</button>
+    <button class="m-close" onclick="document.getElementById('modalOv').classList.remove('show')">ปิด</button>
   </div>
 </div>
 
 <script>
-/* ─── TOGGLE DAY ─── */
-function toggle(headerEl) {
-  const card = headerEl.closest('.day-card');
-  card.classList.toggle('open');
+function tog(hdr){
+  const c=hdr.closest('.day-card');
+  c.classList.toggle('open');
 }
 
-/* ─── SCROLL TO DAY ─── */
-function scrollToDay(id, btn) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const card = el.querySelector('.day-card');
-  if (card && !card.classList.contains('open')) card.classList.add('open');
-  const navH = document.querySelector('.topnav')?.offsetHeight || 50;
-  const tabH = document.querySelector('.day-tabs')?.offsetHeight || 0;
-  const offset = navH + tabH + 16;
-  const top = el.getBoundingClientRect().top + window.scrollY - offset;
-  window.scrollTo({ top, behavior: 'smooth' });
-  // Update active in nav
-  document.querySelectorAll('.nav-day-btn, .day-tab').forEach(b => b.classList.remove('active'));
-  const idx = parseInt(id.replace('d','')) - 1;
-  document.querySelectorAll('.nav-day-btn')[idx]?.classList.add('active');
-  document.querySelectorAll('.day-tab')[idx]?.classList.add('active');
+function goDay(id,btn){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const card=el.querySelector('.day-card');
+  if(card&&!card.classList.contains('open'))card.classList.add('open');
+  const navH=(document.querySelector('.topnav')?.offsetHeight||50)+
+             (document.querySelector('.mob-tabs')?.offsetHeight||0)+12;
+  window.scrollTo({top:el.getBoundingClientRect().top+scrollY-navH,behavior:'smooth'});
+  document.querySelectorAll('.nd-btn,.mt-btn').forEach(b=>b.classList.remove('active'));
+  const i=parseInt(id.replace('d',''))-1;
+  document.querySelectorAll('.nd-btn')[i]?.classList.add('active');
+  document.querySelectorAll('.mt-btn')[i]?.classList.add('active');
 }
 
-/* ─── AUTO HIGHLIGHT NAV ON SCROLL ─── */
-const dayWraps = document.querySelectorAll('.day-wrap[id]');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const idx = parseInt(e.target.id.replace('d','')) - 1;
-      document.querySelectorAll('.nav-day-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.day-tab').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.nav-day-btn')[idx]?.classList.add('active');
-      document.querySelectorAll('.day-tab')[idx]?.classList.add('active');
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const i=parseInt(e.target.id.replace('d',''))-1;
+      document.querySelectorAll('.nd-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.mt-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.nd-btn')[i]?.classList.add('active');
+      document.querySelectorAll('.mt-btn')[i]?.classList.add('active');
     }
   });
-}, { rootMargin: '-25% 0px -65% 0px' });
-dayWraps.forEach(w => io.observe(w));
+},{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('.day-wrap[id]').forEach(w=>io.observe(w));
 
-/* ─── SHARE ─── */
-function shareLink() {
-  const url = window.location.href;
-  if (navigator.share) {
-    navigator.share({ title: '🗾 Japan Trip 2026', text: 'แผนทริปญี่ปุ่น 20 คน', url });
-  } else {
-    navigator.clipboard?.writeText(url).then(() => {
-      alert('คัดลอกลิงก์แล้ว! 🔗\nส่งให้เพื่อนร่วมทริปได้เลย');
-    }).catch(() => {
-      prompt('คัดลอก URL นี้:', url);
-    });
-  }
+function openSOS(){document.getElementById('modalOv').classList.add('show');}
+function closeSOS(e){if(e.target===document.getElementById('modalOv'))document.getElementById('modalOv').classList.remove('show');}
+
+function shareMe(){
+  const url=location.href;
+  if(navigator.share){navigator.share({title:'🗾 Japan Trip 2026',text:'แผนทริปญี่ปุ่น 20 คน',url});}
+  else if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>alert('คัดลอกลิงก์แล้ว! 🔗\nส่งให้เพื่อนร่วมทริปได้เลย'));}
+  else{prompt('คัดลอก URL นี้:',url);}
 }
-/* ─── MODAL ─── */
-function openModal() { document.getElementById('modal').classList.add('show'); }
-function closeModal() { document.getElementById('modal').classList.remove('show'); }
-function closeModalOutside(e) { if (e.target === document.getElementById('modal')) closeModal(); }
 </script>
 </body>
 </html>
-
