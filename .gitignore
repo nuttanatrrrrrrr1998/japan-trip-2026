@@ -1,0 +1,44 @@
+# japan-trip-2026 ignore rules
+# Static site project (HTML/CSS/JS) with optional local tooling.
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE artifacts
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+
+# Local history and temp files
+.history/
+*.tmp
+*.temp
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files (keep local secrets out of git)
+.env
+.env.local
+.env.*.local
+
+# Optional dependency/build output directories
+node_modules/
+dist/
+build/
+coverage/
+
+# Cache folders
+.cache/
+.parcel-cache/
+
